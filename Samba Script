@@ -1,0 +1,13 @@
+!/bin/bash -e
+apt-get update -y
+apt-get install samba -y
+mkdir /srv/kozos
+chmod 777 /srv/kozos
+cp  /etcsmb.conf /samba/smb.conf
+service smbd restart
+service smbd status
+adduser user2 --gecos "user2,,," --disabled-password
+echo "user2:diak" | chpasswd
+mkdir /srv/user2
+chown user2 /srv/user2
+chmod 700 /srv/user2
