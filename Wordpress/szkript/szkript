@@ -13,7 +13,9 @@ unzip -q latest.zip -d /var/www/html/
 chown -R www-data:www-data /var/www/html/wordpress
 chmod -R 755 /var/www/html/wordpress
 mkdir -p /var/www/html/wordpress/wp-content/uploads
-chown -R www-data:www-data /var/www/html/wordpress/wp-content/uploads 
+chown -R www-data:www-data /var/www/html/wordpress/wp-content/uploads
+mkdir -p /var/www/html/wordpress/tmp
+chmod 777 /var/www/html/wordpress/tmp
+apt-get install php-mysql php-gd -y
 service apache2 restart
-apt-get install php-mysql
 echo "A szkript sikeresen lefutott."
