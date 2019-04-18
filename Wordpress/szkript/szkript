@@ -15,5 +15,5 @@ chmod -R 755 /var/www/html/wordpress
 mkdir -p /var/www/html/wordpress/wp-content/uploads
 chown -R www-data:www-data /var/www/html/wordpress/wp-content/uploads 
 service apache2 restart
-apt-get install php7.0-mysql
+apt-get install php-mysql
 echo "A szkript sikeresen lefutott."
